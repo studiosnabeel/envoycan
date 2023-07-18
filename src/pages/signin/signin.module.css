@@ -1,8 +1,160 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-image: url('bg.png');
   background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 730px;
+  height: 1100px;
+}
+
+.nav {
+  margin-left: 140px;
+  font-size: 14px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navDash {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  text-decoration: none;
+  color: #2d3748;
+  background: white;
+  border-radius: 10px;
+  padding: 8px 45px;
+}
+
+.navContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+.navFolder {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.signInContainer {
+  color: #2d3748;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 453px;
+  height: 550px;
+  margin: 160px auto;
+  padding: 20px 0;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons {
+  border: 1px solid rgb(244, 244, 244);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.blueBtn {
+  padding: 16px 0;
+  border-radius: 7px;
+  color: white;
+  background-color: #2d3748;
+}
+
+.form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.credentials input {
+  padding: 10px 0;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  border: 2px solid rgb(230, 230, 230);
+}
+
+.label1 {
+  font-weight: bolder;
+  text-shadow: 0 2px 4px;
+}
+
+.signup {
+  display: flex;
+  gap: 10px;
+}
+
+.singUpText {
+  text-decoration: none;
+  color: #2d3748;
+}
+
+.toggle {
+  margin-bottom: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.dont {
+  font-weight: 300;
+  color: #a0aec0;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: white;
+  height: 150px;
+  padding: 0 100px;
 }
 
 .footer a {
@@ -11,24 +163,19 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.nav {
+.anchorContainer {
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
 }
 
-.link {
-  text-decoration: none;
-  color: white;
-}
+@media (max-width: 768px) {
+  .nav {
+    margin: 0;
+  }
 
-.navContainer {
-  width: 400px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.navFolder {
-  display: flex;
-  justify-content: center;
+  .btn {
+    display: none;
+  }
 }

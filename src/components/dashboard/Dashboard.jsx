@@ -1,14 +1,27 @@
 import { Link } from 'react-router-dom';
 import styles from './dash.module.css';
+import { auth } from '../../firebase-config';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { useState } from 'react';
 
 const Dashboard = () => {
+  const [user, setUser] = useState({});
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+
+  const logOut = async () => {
+    await signOut(auth);
+    alert('logged out succesfully');
+  };
   return (
     <section className={styles.dashboardSection}>
       {/* Nav Section */}
       <nav className={styles.navbar}>
         <div className={styles.upContainer}>
           <p className={styles.para}>pages/dashboard</p>
-          <h3 className={styles.heading}>Dashboard</h3>
+          <h3 className={styles.heading}>{user?.email}</h3>
         </div>
 
         <div className={styles.lowerContainer}>
@@ -22,9 +35,19 @@ const Dashboard = () => {
           </div>
           <div className={styles.signinContainer}>
             <img src="../../../public/person.png" alt="img" />
-            <Link to="/login" className={styles.signin}>
-              Sign In
-            </Link>
+            {!user ? (
+              <Link to="/login" className={styles.signin}>
+                SignIn
+              </Link>
+            ) : (
+              <Link
+                onClick={logOut}
+                to="/pageContent/dashboard"
+                className={styles.signin}
+              >
+                Logout
+              </Link>
+            )}
           </div>
           <div className={styles.lastContainer}>
             <Link>

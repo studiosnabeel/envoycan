@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.bg {
+  display: flex;
+  width: 100%;
+  background-image: url('../../../public/Background.png');
+  background-size: 100% 39%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .bg {
+    background-size: 100% 100%;
+  }
+}

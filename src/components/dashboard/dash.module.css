@@ -1,0 +1,190 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.upContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  color: white;
+}
+
+.para {
+  font-weight: 400;
+}
+
+.heading {
+  font-weight: bolder;
+}
+
+.bar {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 7px;
+}
+
+.input {
+  padding: 10px 20px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+}
+
+.lowerContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.signin {
+  text-decoration: none;
+  color: white;
+}
+
+.signinContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lastContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 920px) {
+  .lowerContainer {
+    display: none;
+  }
+}
+
+/* card styling */
+
+.cardContainer {
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+}
+
+.subCardContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.subSubContainer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-small;
+  background-color: #fff;
+  gap: 20px;
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.secondheading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.headingGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.text {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.h3 {
+  font-size: 16px;
+  color: #48bb78;
+}
+
+.h2 {
+  font-size: 18px;
+  color: #2d3748;
+}
+
+.h4 {
+  font-size: 14px;
+  color: #a0aec0;
+}
+
+.p {
+  font-size: 14px;
+  color: #a0aec0;
+}
+
+@media (max-width: 1200px) {
+  .subSubContainer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .subCardContainer {
+    flex-direction: column;
+  }
+  .upContainer {
+    display: none;
+  }
+}
+
+/* Graphs section css */
+
+.graphContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.subGraphContainer {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.subSubGraphContainer{
+display: flex;
+}
+
+.graphsdivGroup1 {
+  display: flex;
+
+}
+
+.graphdivGroup2 {
+  display: flex;
+
+}
+
+.graphImage {
+  width: 100%;
+  height: 100%;
+}
+
+@media (width: 768px) {
+.subSubGraphContainer {
+    flex-direction: column;
+  }
+}

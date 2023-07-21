@@ -1,24 +1,45 @@
 import styles from './register.module.css';
 import { Link } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import {
   KeyOutlined,
   UserOutlined,
   DashboardOutlined,
 } from '@ant-design/icons';
+import { useState } from 'react';
+import { auth } from '../../firebase-config';
 
 const Register = () => {
+  const [registerName, setRegisterName] = useState('');
+  const [registerEmail, setRegisterEmail] = useState('');
+  const [registerPassword, setRegisterPassword] = useState('');
+
+  const register = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        registerEmail,
+        registerPassword
+      );
+      console.log(user);
+    } catch (err) {
+      alert(err.message);
+      console.log(err.message);
+    }
+  };
+
   return (
     <section className={styles.container}>
       <div className={styles.navFolder}>
         <div className={styles.navContainer}>
           <nav className={styles.nav}>
-            <Link to="/" className={styles.link}>
+            <Link to="/pagecontent/dashboard" className={styles.link}>
               <div className={styles.navDash}>
                 <DashboardOutlined />
                 <h3>Dashboard</h3>
               </div>
             </Link>
-            <Link to="/" className={styles.link}>
+            <Link to="/pagecontent/dashboard" className={styles.link}>
               <div className={styles.navDash}>
                 <UserOutlined />
                 <h3>Profile</h3>
@@ -70,21 +91,32 @@ const Register = () => {
         <form className={styles.form}>
           <div className={styles.credentials}>
             <label className={styles.label1}>Name</label>
-            <input type="text" />
+            <input
+              type="text"
+              onChange={(e) => setRegisterName(e.target.value)}
+            />
           </div>
           <div className={styles.credentials}>
             <label className={styles.label1}>Email</label>
-            <input type="text" />
+            <input
+              type="text"
+              onChange={(e) => setRegisterEmail(e.target.value)}
+            />
           </div>
           <div className={styles.credentials}>
             <label>Password</label>
-            <input type="password" />
+            <input
+              type="password"
+              onChange={(e) => setRegisterPassword(e.target.value)}
+            />
           </div>
           <div className={styles.toggle}>
             <img src="./toggle.png" alt="toggle icon" />
             <p>Remember me</p>
           </div>
-          <button className={styles.blueBtn}>Sign up</button>
+          <Link className={styles.linkBlueBtn} to="/login">
+            <button onClick={register} className={styles.blueBtn}>Sign up</button>
+          </Link>
         </form>
         <div className={styles.signup}>
           <p className={styles.dont}>Dont have an account</p>

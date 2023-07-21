@@ -5,8 +5,28 @@ import {
   UserOutlined,
   DashboardOutlined,
 } from '@ant-design/icons';
+import { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase-config';
 
 const SignIn = () => {
+  const login = async () => {
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth,
+        loginEmail,
+        loginPassword
+      );
+      console.log(user);
+    } catch (err) {
+      alert(err.message);
+      console.log(err.message);
+    }
+  };
+
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+
   return (
     <section className={styles.container}>
       <div className={styles.navFolder}>
@@ -62,18 +82,26 @@ const SignIn = () => {
         <form className={styles.form}>
           <div className={styles.credentials}>
             <label className={styles.label1}>Name</label>
-            <input type="text" />
+            <input
+              type="email"
+              onChange={(e) => setLoginEmail(e.target.value)}
+            />
           </div>
           <div className={styles.credentials}>
             <label>Password</label>
-            <input type="password" />
+            <input
+              type="password"
+              onChange={(e) => setLoginPassword(e.target.value)}
+            />
           </div>
           <div className={styles.toggle}>
             <img src="./toggle.png" alt="toggle icon" />
             <p>Remember me</p>
           </div>
           <Link className={styles.linkBlueBtn} to="/pagecontent/dashboard">
-            <button className={styles.blueBtn}>Sign in</button>
+            <button onClick={login} className={styles.blueBtn}>
+              Sign in
+            </button>
           </Link>
         </form>
         <div className={styles.signup}>

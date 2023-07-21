@@ -72,7 +72,9 @@ const SignIn = () => {
             <img src="./toggle.png" alt="toggle icon" />
             <p>Remember me</p>
           </div>
-          <button className={styles.blueBtn}>Sign in</button>
+          <Link className={styles.linkBlueBtn} to="/pagecontent/dashboard">
+            <button className={styles.blueBtn}>Sign in</button>
+          </Link>
         </form>
         <div className={styles.signup}>
           <p className={styles.dont}>Dont have an account</p>

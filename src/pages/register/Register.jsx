@@ -12,13 +12,13 @@ const Register = () => {
       <div className={styles.navFolder}>
         <div className={styles.navContainer}>
           <nav className={styles.nav}>
-            <Link to="/" className={styles.link}>
+            <Link to="/pagecontent/dashboard" className={styles.link}>
               <div className={styles.navDash}>
                 <DashboardOutlined />
                 <h3>Dashboard</h3>
               </div>
             </Link>
-            <Link to="/" className={styles.link}>
+            <Link to="/pagecontent/dashboard" className={styles.link}>
               <div className={styles.navDash}>
                 <UserOutlined />
                 <h3>Profile</h3>
@@ -84,7 +84,9 @@ const Register = () => {
             <img src="./toggle.png" alt="toggle icon" />
             <p>Remember me</p>
           </div>
-          <button className={styles.blueBtn}>Sign up</button>
+        <Link className={styles.linkBlueBtn} to="/login">
+            <button className={styles.blueBtn}>Sign up</button>
+          </Link>
         </form>
         <div className={styles.signup}>
           <p className={styles.dont}>Dont have an account</p>

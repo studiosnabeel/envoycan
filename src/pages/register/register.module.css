@@ -106,7 +106,15 @@
   cursor: pointer;
 }
 
+.linkBlueBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .blueBtn {
+  width: 100%;
   padding: 16px 0;
   border-radius: 7px;
   color: white;

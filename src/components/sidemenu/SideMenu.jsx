@@ -1,12 +1,26 @@
 import { Link } from 'react-router-dom';
 import styles from './sidemenu.module.css';
+import { auth } from '../../firebase-config';
+import { signOut } from 'firebase/auth';
 
 const SideMenu = () => {
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      alert('Logged out successfully')
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
   return (
     <section className={styles.container}>
       <div className={styles.upContainer}>
         <div>
-          <img className={styles.companyLogo} src="../../../public/logo.png" alt="Company logo" />
+          <img
+            className={styles.companyLogo}
+            src="../../../public/logo.png"
+            alt="Company logo"
+          />
         </div>
         <div className={styles.menu}>
           <img
@@ -49,10 +63,28 @@ const SideMenu = () => {
             Sign Up
           </Link>
         </div>
+        <div className={styles.menu}>
+          <img
+            className={styles.pic}
+            src="../../../public/doc.png"
+            alt="icon"
+          />
+          <Link
+            onClick={logout}
+            to="/pagecontent/dashboard"
+            className={styles.links}
+          >
+            Sign Out
+          </Link>
+        </div>
       </div>
       <div className={styles.downContainer}>
         <div className={styles.folderImageContainer}>
-          <img className={styles.folderImage} src="../../../public/docs.svg" alt="documents picture" />
+          <img
+            className={styles.folderImage}
+            src="../../../public/docs.svg"
+            alt="documents picture"
+          />
         </div>
         <div>
           <h3>Need help?</h3>

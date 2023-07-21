@@ -3,9 +3,18 @@
   margin: 0;
 }
 
+.upContainer {
+  color: white;
+}
+
+.upContainerh3 {
+  font-size: large;
+  font-weight: 700;
+}
+
 .navbar {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   margin-top: 20px;
   padding: 0 20px;
@@ -65,10 +74,6 @@
 /* Billing Section */
 /* salary paypal section */
 
-.upperFolder {
-  margin: 40px;
-}
-
 .objectFit {
   display: flex;
   justify-content: center;
@@ -105,7 +110,7 @@
 .searchFolder {
   box-shadow: 2px 1px 10px rgb(200, 200, 200, 0.8);
   text-align: start;
-  margin: 0;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -149,11 +154,17 @@
   }
 
   .upperFolder {
-    margin: 0;
+    margin: 10px;
   }
 
   .searchFolder {
-    margin-top: 30px;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+  .cardInputContainer {
+    box-shadow: 2px 2px 10px rgb(200, 200, 200, 0.7);
   }
 }
 
@@ -168,11 +179,18 @@
     margin: 20px 0;
     background-color: #fff;
     border-radius: 10px;
-    padding: 6px 0;
+    padding: 10px;
     flex-direction: row;
+    justify-content: space-between;
   }
   .upperFolder {
     margin: 0;
+  }
+  .addCardBtn {
+    align-self: flex-end;
+  }
+  .invoiceH3 {
+    align-self: flex-start;
   }
 }
 
@@ -184,9 +202,9 @@
   }
 
   .searchFolder {
-    padding: 30px 20px;
+    padding: 20px;
     justify-content: space-between;
-    width: 700px;
+    width: 100%;
   }
 }
 
@@ -266,7 +284,7 @@
   flex: 60%;
   border: 2px solid grey;
   border-radius: 12px;
-  padding: 20px 10px;
+  padding: 10px;
   background-color: #fff;
 }
 
@@ -344,8 +362,26 @@
   }
 
   .invoiceFolder {
+    flex: 100%;
     flex-direction: column;
-    padding: 10px 0;
+    padding: 10px;
+  }
+  .CustomerInfoContainer {
+    flex-direction: column;
+  }
+  .customerInfo {
+    flex-direction: column;
+  }
+  .invoiceDesc {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .invoicesBtn {
+    display: none;
+  }
+  .billH2 {
+    font-size: 20px;
+    font-weight: 900;
   }
 }
 

@@ -14,7 +14,8 @@
 }
 
 .para {
-  font-weight: 400;
+  font-size: larger;
+  font-weight: 500;
 }
 
 .heading {
@@ -43,6 +44,8 @@
 }
 
 .signin {
+  font-size: large;
+  font-weight: bolder;
   text-decoration: none;
   color: white;
 }
@@ -51,6 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5px;
 }
 
 .lastContainer {
@@ -164,18 +168,16 @@
   margin: 20px 0;
 }
 
-.subSubGraphContainer{
-display: flex;
+.subSubGraphContainer {
+  display: flex;
 }
 
 .graphsdivGroup1 {
   display: flex;
-
 }
 
 .graphdivGroup2 {
   display: flex;
-
 }
 
 .graphImage {
@@ -184,7 +186,7 @@ display: flex;
 }
 
 @media (width: 768px) {
-.subSubGraphContainer {
+  .subSubGraphContainer {
     flex-direction: column;
   }
 }

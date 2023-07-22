@@ -108,15 +108,18 @@
 }
 
 .searchFolder {
+  background-color: #fff;
   box-shadow: 2px 1px 10px rgb(200, 200, 200, 0.8);
   text-align: start;
   margin: 10px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-radius: 12px;
 }
 
 .subSearchFolders {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,11 +128,14 @@
 }
 
 .searchInputs {
+  width: 100%;
+  padding: 6px 0;
   border: none;
   outline: none;
 }
 
 .cardInputContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,6 +153,12 @@
   border-radius: 6px;
 }
 
+@media (min-width: 500px) {
+  .cardInputContainer {
+    box-shadow: 2px 2px 10px rgb(200, 200, 200, 0.7);
+  }
+}
+
 @media (min-width: 768px) {
   .salaryFolder {
     flex-direction: row;
@@ -158,6 +170,7 @@
   }
 
   .searchFolder {
+    padding: 10px;
     border-radius: 12px;
     background-color: #fff;
     width: 100%;
@@ -250,6 +263,7 @@
 .invoiceH3 {
   color: #2d3748;
   font-size: large;
+  padding: 6px;
 }
 
 .invoiceDesc {

@@ -135,7 +135,7 @@ const Billing = () => {
                 <h3 className={styles.invoiceH3}>Payment Method</h3>
                 <div className={styles.cardInputContainer}>
                   <img src="../../../public/mastercard.png" alt="card img" />
-                  <input className={styles.searchInputs} type="number" />
+                  <input className={styles.searchInputs} type="text" />
                   <img src="../../../public/edit.png" alt="penicon" />
                 </div>
               </div>
@@ -143,7 +143,7 @@ const Billing = () => {
                 <button className={styles.addCardBtn}>ADD A NEW CARD</button>
                 <div className={styles.cardInputContainer}>
                   <img src="../../../public/visa.png" alt="visalogo" />
-                  <input className={styles.searchInputs} type="number" />
+                  <input className={styles.searchInputs} type="text" />
                   <img src="../../../public/edit.png" alt="pen icon" />
                 </div>
               </div>

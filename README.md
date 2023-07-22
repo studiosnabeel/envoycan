@@ -40,6 +40,8 @@ The Envoycan dashboard project was built with:
 
 You can view a live demo of the Envoycan at COMING SOON.
 
+[Presentation of the Project](https://www.linkedin.com/feed/update/urn:li:activity:7088493749839773696/)
+
 ## Getting Started
 
 To get a local copy up and running, follow these steps:

@@ -130,7 +130,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgements
 
-- [Envoycan](https://www.microverse.org/) for providing the opportunity to apply for this position.
+- [Envoycan](https://envoycan.com/) for providing the opportunity to apply for this position.
 - [Firebase](https://firebase.google.com/docs?gad=1&gclid=Cj0KCQjw_O2lBhCFARIsAB0E8B-sEKio_1_AE8kQ6U0obqhfgfLnyAS6FnCtX4y9ixFpAmnHjv5LBWYaAorCEALw_wcB&gclsrc=aw.ds) for the excellent documentation on Firebase.
 
 ## License
